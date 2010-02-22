@@ -11,8 +11,11 @@ namespace PostCrap
 	{
 		static void Main(string[] args)
 		{
-			if(args.Length != 2)
+			if (args.Length != 2)
+			{
 				Console.Error.WriteLine("usage: postcrap [source assembly path] [target path]");
+				return;
+			}
 
 			CodeInjector.ProcessAssembly(args[0], args[1]);
 		}
