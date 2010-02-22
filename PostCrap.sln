@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostCrap", "PostCrap\PostCrap.csproj", "{48F43397-354A-4D6E-8085-D655013996BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostCrap.Tests", "PostCrap.Tests\PostCrap.Tests.csproj", "{02D728F0-565F-4A8B-841F-F8B1AC2C74F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{48F43397-354A-4D6E-8085-D655013996BB} = {48F43397-354A-4D6E-8085-D655013996BB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostCrap.Nihl", "PostCrap.Nihl\PostCrap.Nihl.csproj", "{6B4300DC-3675-41C0-B86E-D0A80D48B715}"
 EndProject
