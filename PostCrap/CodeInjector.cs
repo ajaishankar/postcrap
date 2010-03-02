@@ -197,7 +197,11 @@ namespace PostCrap
 
 			foreach (GenericParameter type in method.DeclaringType.GenericParameters)
 			{
-				stubType.GenericParameters.Add(new GenericParameter(type.Name, stubType));
+				stubType.GenericParameters.Add(new GenericParameter(type.Name, stubType)
+				                               	{
+													Position = type.Position,
+													Attributes = type.Attributes
+				                               	});
 			}
 
 			stubType.Methods.Add(callOriginal);

@@ -111,6 +111,14 @@ namespace PostCrap.Tests
 			Assert.AreEqual(2, result);
 		}
 
+		[Test]
+		public void Can_Intercept_Method_In_GenericType_Of_Int_String_WithIncrementArg_In_Nested_Type()
+		{
+			var helper = CreateInstanceAndUnwrap<GenericHelper>();
+			int result = helper.Invoke_WithIncrementArg_On_Int_String_Nested(1, "it works!");
+			Assert.AreEqual(2, result);
+		}
+
 		private static string Quote(string value)
 		{
 			return '"' + value + '"';

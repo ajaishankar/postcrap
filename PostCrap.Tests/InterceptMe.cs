@@ -53,6 +53,15 @@ namespace PostCrap.Tests
 		{
 			return a1;
 		}
+
+		public class Nested
+		{
+			[IncrementArg]
+			public T WithIncrementArg(T a1, U u)
+			{
+				return a1;
+			}
+		}
 	}
 
 	public class GenericHelper : MarshalByRefObject
@@ -60,6 +69,11 @@ namespace PostCrap.Tests
 		public int Invoke_WithIncrementArg_On_Int_String(int x, string y)
 		{
 			return new InterceptMe<int, string>().WithIncrementArg(x, y);
+		}
+
+		public int Invoke_WithIncrementArg_On_Int_String_Nested(int x, string y)
+		{
+			return new InterceptMe<int, string>.Nested().WithIncrementArg(x, y);
 		}
 
 		public float Invoke_WithIncrementArg_On_Float_String(float x, string y)
